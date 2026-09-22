@@ -7,7 +7,7 @@
  *
  * 数据来源:
  *   1. 原厂 U-Boot 传给内核的活动设备树 (device_tree.dts)
- *      - machid = 0x8000108
+ *      - 机器号 0x08010008 (属性名在本文件中只能出现一次, 勿写进注释)
  *      - compatible = "qcom,ipq807x-hk09"
  *      - reset 键 = tlmm 55 (低有效)
  *      - led_5g = tlmm 61 / led_2g = tlmm 62 / led_signal_r = tlmm 2 / led_signal_g = tlmm 63
@@ -24,6 +24,13 @@
 	host_name = "Hisense F50";
 	model = "ipq807x-hisense_f50";
 	compatible = "qca,ipq807x-hk09", "qca,ipq807x";
+
+	/*
+	 * 注意: scripts/Makefile.lib (cmd_dt_comb_S_dtb) 是用 grep 从本文件
+	 * 里搜索机器号属性名来取值的, 因此该属性在本文件里必须只出现一次 ——
+	 * 注释里也不要重复书写属性名, 否则生成出的 dtbtable.S 会报
+	 * "junk at end of line" 之类的汇编错误。
+	 */
 	machid = <0x08010008>;
 	config_name = "config@f50", "config-f50", "config@hk09", "config-hk09", "config@1", "config-1";
 
