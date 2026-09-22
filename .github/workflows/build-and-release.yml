@@ -25,6 +25,7 @@ on:
           - cradlepoint_e320
           - cucc_vs010
           - glinet_gl-ax1800
+          - hisense_f50
           - inseego_fg2000
           - jdcloud_ax3000
           - jdcloud_re-cs-02
