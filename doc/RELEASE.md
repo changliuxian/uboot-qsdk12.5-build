@@ -7,6 +7,7 @@
 | IPQ60xx | Redmi AX5                              | redmi_ax5         | 待测试                                           |
 | IPQ60xx | Xiaomi AX1800                          | xiaomi_ax1800     | 待测试                                           |
 | IPQ807x | Cradlepoint E320                       | cradlepoint_e320  | 原机 CPU 有锁，需更换无锁 CPU 才能刷写此 U-Boot      |
+| IPQ807x | Hisense F50                            | hisense_f50       | WAN 口（QCA8081）未驱动                          |
 | IPQ807x | OPPO CKB01 (SoftBank Air 5G)           | oppo_ckb01        |                                                 |
 | IPQ807x | Xiaomi AX9000                          | xiaomi_ax9000     | 待测试                                           |
 
